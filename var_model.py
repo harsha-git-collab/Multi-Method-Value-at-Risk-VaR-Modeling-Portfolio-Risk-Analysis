@@ -16,28 +16,35 @@ weights = np.array([0.25, 0.20, 0.20, 0.20, 0.15])
 
 portfolio_returns = returns.dot(weights)
 
+#Historical VaR
 VaR_95_hist = np.percentile(portfolio_returns, 5)
 VaR_99_hist = np.percentile(portfolio_returns, 1)
 
+#Parametric VaR
 mean = portfolio_returns.mean()
 std = portfolio_returns.std()
 
 VaR_95_param = stats.norm.ppf(0.05, mean, std)
 VaR_99_param = stats.norm.ppf(0.01, mean, std)
 
+#Monte Carlo
 simulations = 10000
 simulated_returns = np.random.normal(mean, std, simulations)
 
 VaR_95_mc = np.percentile(simulated_returns, 5)
 VaR_99_mc = np.percentile(simulated_returns, 1)
 
+#Expected Shortfall
 CVaR_95 = portfolio_returns[portfolio_returns <= VaR_95_hist].mean()
 
+#Rolling VaR
 rolling_VaR = portfolio_returns.rolling(window=100).quantile(0.05)
 
+#Backtesting
 violations = portfolio_returns < VaR_95_hist
 violation_rate = violations.mean()
 
+#Stress Testing
 stress_returns = portfolio_returns * 2
 stress_VaR = np.percentile(stress_returns, 5)
 
@@ -62,6 +69,7 @@ print("Violation Rate:", violation_rate)
 print("\nSTRESS TEST")
 print("Stress VaR (95%):", stress_VaR)
 
+#Visualizations
 plt.figure(figsize=(10,5))
 plt.hist(portfolio_returns, bins=50)
 plt.axvline(VaR_95_hist, linestyle='dashed', label='Hist VaR 95%')
