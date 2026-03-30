@@ -8,6 +8,8 @@ assets = ['RELIANCE.NS', 'TCS.NS', 'HDFCBANK.NS', '^NSEI', 'GOLDBEES.NS']
 
 data = yf.download(assets, start="2022-01-01", end="2024-01-01")['Close']
 
+data.head()
+
 returns = data.pct_change().dropna()
 
 weights = np.array([0.25, 0.20, 0.20, 0.20, 0.15])
