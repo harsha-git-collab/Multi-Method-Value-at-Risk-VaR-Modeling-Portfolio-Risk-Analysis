@@ -1,7 +1,7 @@
 # Multi-Method-Value-at-Risk-VaR-Modeling-Portfolio-Risk-Analysis
 This project implements a comprehensive risk analytics framework to measure and evaluate portfolio downside risk using multiple Value at Risk (VaR) methodologies. It combines historical data analysis, statistical modeling, and simulation techniques to provide a robust understanding of financial risk.
 
-Objective:
+# Objective:
 
 To build a multi-method VaR model that:
 
@@ -11,7 +11,7 @@ Validates model accuracy using backtesting
 Analyzes extreme market conditions through stress testing
 
 
-Methodologies Implemented
+# Methodologies Implemented
 1. Historical VaR
 Uses empirical return distributions
 No distribution assumptions
@@ -45,7 +45,8 @@ Tests portfolio resilience under high volatility
 
 
 
-Tech Stack
+# Tech Stack
+
 Python
 Pandas – Data manipulation
 NumPy – Numerical computations
@@ -54,16 +55,18 @@ SciPy – Statistical modeling
 yFinance – Financial data extraction
 
 
-Historical price data for:
+# Historical price data for:
+
 Reliance Industries
 TCS
 HDFC Bank
 NIFTY 50 Index
 Gold ETF
+
 Time Period: 2022 – 2024
 
 
-Key Features:
+# Key Features:
 
 Multi-asset portfolio construction
 Multi-method VaR comparison
@@ -73,7 +76,7 @@ Scenario-based stress testing
 Visual risk analytics
 
 
-Key Insights:
+# Key Insights:
 
 Historical VaR effectively captures fat-tail risk
 Parametric VaR may underestimate extreme losses
@@ -83,12 +86,10 @@ Diversification reduces overall portfolio risk
 Backtesting helps assess model reliability
 
 
+# How to run the project:
 
-
-How to run the project:
-
-# Install dependencies
+#Install dependencies
 pip install yfinance pandas numpy matplotlib scipy
 
-# Run the script
+#Run the script
 python var_model.py
