@@ -1,6 +1,4 @@
 # Multi-Method-Value-at-Risk-VaR-Modeling-Portfolio-Risk-Analysis
-Developed a multi-method VaR framework using Python, implementing Historical, Parametric, and Monte Carlo approaches along with backtesting, stress testing, and Expected Shortfall to analyze portfolio downside risk.
-
 This project implements a comprehensive risk analytics framework to measure and evaluate portfolio downside risk using multiple Value at Risk (VaR) methodologies. It combines historical data analysis, statistical modeling, and simulation techniques to provide a robust understanding of financial risk.
 
 Objective:
