@@ -13,34 +13,47 @@ Analyzes extreme market conditions through stress testing
 
 # Methodologies Implemented
 1. Historical VaR
+
 Uses empirical return distributions
+
 No distribution assumptions
+
 Captures real market behavior
 
 2. Parametric VaR (Variance-Covariance)
+
 Assumes normal distribution of returns
+
 Uses mean and standard deviation
+
 Fast and widely used in finance
 
 3. Monte Carlo Simulation VaR
+
 Simulates 10,000+ return scenarios
+
 Provides forward-looking risk estimation
+
 Captures uncertainty in market movements
 
 4. Expected Shortfall (CVaR)
 Measures average loss beyond VaR
+
 Captures tail risk more effectively
 
 5. Rolling VaR
 Time-varying risk estimation
+
 Identifies volatility clustering and regime changes
 
 6. Backtesting
 Evaluates model accuracy
+
 Compares expected vs actual VaR violations
 
 7. Stress Testing
 Simulates extreme market conditions
+
 Tests portfolio resilience under high volatility
 
 
@@ -48,10 +61,15 @@ Tests portfolio resilience under high volatility
 # Tech Stack
 
 Python
+
 Pandas – Data manipulation
+
 NumPy – Numerical computations
+
 Matplotlib – Data visualization
+
 SciPy – Statistical modeling
+
 yFinance – Financial data extraction
 
 
@@ -69,10 +87,15 @@ Time Period: 2022 – 2024
 # Key Features:
 
 Multi-asset portfolio construction
+
 Multi-method VaR comparison
+
 Tail-risk measurement using CVaR
+
 Model validation via backtesting
+
 Scenario-based stress testing
+
 Visual risk analytics
 
 
